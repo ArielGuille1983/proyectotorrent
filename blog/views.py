@@ -5,8 +5,10 @@ from .models import Post, Comment
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 
-
+def index(request):
+    return HttpResponse("Hello, world. Youre at the poll index")
 
 
 def post_list(request):
@@ -91,3 +93,4 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
+
