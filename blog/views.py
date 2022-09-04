@@ -5,10 +5,7 @@ from .models import Post, Comment
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
 
-def index(request):
-    return HttpResponse("Hello, world. d1ced6de is the polls index.")
 
 
 def post_list(request):
