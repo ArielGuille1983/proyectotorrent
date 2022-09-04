@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello, world. Youre at the poll index")
+    return HttpResponse("Hello, world. d1ced6de is the polls index.")
 
 
 def post_list(request):
